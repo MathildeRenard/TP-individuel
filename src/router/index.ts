@@ -6,6 +6,7 @@ import Bookmarks from '../views/Bookmarks.vue'
 import BookmarkedElement from '../views/BookmarkedElement.vue'
 import Search from '../views/Search.vue'
 import supr from '../views/supr.vue'
+import update from '../views/update.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -38,7 +39,10 @@ const routes: Array<RouteRecordRaw> = [
   },
   { path: '/supr',
     name: 'supr',
-    component: supr}
+    component: supr},
+  {path: '/update',
+  name: 'update',
+  component: update}
 ]
 
 const router = createRouter({

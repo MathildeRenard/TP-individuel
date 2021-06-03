@@ -11,14 +11,6 @@
                         <p>{{ tempMorning }}</p>
                         <p>{{ tempAfternoon }}</p>
                     </ion-col>
-                    <ion-col>
-                        <ion-button color="danger" @click="deleteBookmark">
-                            <ion-icon slot="icon-only" :icon="trash"></ion-icon>
-                        </ion-button>
-                      <ion-button color="dark" @click="deleteBookmark">
-                        <ion-icon slot="icon-only" :icon="options"></ion-icon>
-                      </ion-button>
-                    </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-card-content>
@@ -29,10 +21,8 @@
 
 
     import {
-      IonIcon,
         IonCard,
         IonCardContent,
-        IonButton,
         IonCol,
         IonRow,
         IonGrid
@@ -44,10 +34,8 @@ import {  options } from 'ionicons/icons'
     export default defineComponent ({
         name: "BookmarkedElement",
         components : {
-          IonIcon,
             IonCard,
             IonCardContent,
-            IonButton,
             IonCol,
             IonRow,
             IonGrid
