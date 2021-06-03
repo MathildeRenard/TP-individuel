@@ -23,6 +23,9 @@
 </template>
 
 <script lang="ts">
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
     import {
       IonIcon,
         IonCard,
@@ -52,8 +55,17 @@
             return { trash }
         },
         methods:{
-            deleteBookmark(){'hello'}
-        },
+            deleteBookmark() {
+             const db= firebase.firestore()
+              //Suppression d'une ville dans la liste
+              const querry = db.collection('cities').where('name', '==', "Lyon");
+              querry.get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                  doc.ref.delete();
+                });
+              });
+              console.log("test",querry);
+            },},
         props:{
             city : String,
             tempMorning : String,
