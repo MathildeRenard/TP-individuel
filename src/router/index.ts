@@ -5,7 +5,7 @@ import Main from '../views/Main.vue'
 import Bookmarks from '../views/Bookmarks.vue'
 import BookmarkedElement from '../views/BookmarkedElement.vue'
 import Search from '../views/Search.vue'
-
+import supr from '../views/supr.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -35,7 +35,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/Search',
     name: 'Search',
     component: Search
-  }
+  },
+  { path: '/supr',
+    name: 'supr',
+    component: supr}
 ]
 
 const router = createRouter({

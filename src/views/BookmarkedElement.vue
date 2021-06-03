@@ -15,6 +15,9 @@
                         <ion-button color="danger" @click="deleteBookmark">
                             <ion-icon slot="icon-only" :icon="trash"></ion-icon>
                         </ion-button>
+                      <ion-button color="dark" @click="deleteBookmark">
+                        <ion-icon slot="icon-only" :icon="options"></ion-icon>
+                      </ion-button>
                     </ion-col>
                 </ion-row>
             </ion-grid>
@@ -23,8 +26,7 @@
 </template>
 
 <script lang="ts">
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+
 
     import {
       IonIcon,
@@ -35,9 +37,8 @@ import 'firebase/firestore';
         IonRow,
         IonGrid
     } from '@ionic/vue'
-
+import {  options } from 'ionicons/icons'
     import { trash } from 'ionicons/icons'
-
     import { defineComponent } from 'vue';
 
     export default defineComponent ({
@@ -52,20 +53,8 @@ import 'firebase/firestore';
             IonGrid
         },
         setup() {
-            return { trash }
+            return { trash,options }
         },
-        methods:{
-            deleteBookmark() {
-             const db= firebase.firestore()
-              //Suppression d'une ville dans la liste
-              const querry = db.collection('cities').where('name', '==', "Lyon");
-              querry.get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                  doc.ref.delete();
-                });
-              });
-              console.log("test",querry);
-            },},
         props:{
             city : String,
             tempMorning : String,
