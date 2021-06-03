@@ -5,6 +5,7 @@
   <ion-button color="danger"  @click="deleteBookmark">
     <ion-icon slot="icon-only" :icon="trash"></ion-icon>
   </ion-button>
+  <p>{{msg}}</p>
 </template>
 <script lang="ts">
 import Navbar from '@/views/Navbar';
@@ -28,7 +29,8 @@ export default defineComponent({
   name: "supr",
   data() {
     return {
-      city : ''
+      city : '',
+      msg : ''
     }
   },
   components :{
@@ -61,7 +63,7 @@ export default defineComponent({
           doc.ref.delete();
         });
       });
-
+this.msg = "La ville a bien été supprimée";
     },
   }
 })
