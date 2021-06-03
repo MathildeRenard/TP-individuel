@@ -1,7 +1,7 @@
 <template>
 <Navbar></Navbar>
 
-      <ion-input color="dark" placeholder="Entrez la ville à supprimer" @ionChange=onChange></ion-input>
+      <ion-input color="dark" placeholder="Entrez le nom de la ville à supprimer" @ionChange=onChange></ion-input>
   <ion-button color="danger"  @click="deleteBookmark">
     <ion-icon slot="icon-only" :icon="trash"></ion-icon>
   </ion-button>
