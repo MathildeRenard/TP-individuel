@@ -8,7 +8,7 @@
   <p>{{msg}}</p>
 </template>
 <script lang="ts">
-import Navbar from '@/views/Navbar';
+import Navbar from '@/views/Navbar.vue';
 import {trash} from 'ionicons/icons'
 import firebase from 'firebase/app';
 import 'firebase/firestore'
