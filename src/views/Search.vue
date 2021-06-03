@@ -9,7 +9,6 @@
 <script lang="ts">
 import firebase from 'firebase/app';
 import 'firebase/firestore'
-import { DATABASE_CONFIGURATION } from '@/config.js';
 import {defineComponent} from "vue";
 import {IonSearchbar, IonButton, toastController } from "@ionic/vue";
 import Navbar from "@/views/Navbar.vue";
