@@ -24,6 +24,7 @@
 
 <script lang="ts">
     import {
+      IonIcon,
         IonCard,
         IonCardContent,
         IonButton,
@@ -39,6 +40,7 @@
     export default defineComponent ({
         name: "BookmarkedElement",
         components : {
+          IonIcon,
             IonCard,
             IonCardContent,
             IonButton,
