@@ -62,6 +62,10 @@
 <script>
 
     import {
+      IonList,
+        IonPage,
+      IonItem,
+      IonLabel,
         IonIcon,
         IonCol,
         IonGrid,
@@ -83,6 +87,10 @@
 
     export default defineComponent({
         components: {
+          IonList,
+          IonPage,
+          IonItem,
+          IonLabel,
             IonIcon,
             IonCol,
             IonGrid,
